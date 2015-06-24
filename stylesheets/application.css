@@ -2,3 +2,86 @@
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
 
 /* ここにCSSを書いてデザインを入れよう */
+body {
+  background-color: #AAA;
+  color: #444;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #CFCFCF;
+}
+
+.header {
+  background-color: #999;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.header__title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.global-nav__item {
+  float: left;
+  width: 192px;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.global-nav__item:nth-child(even) {
+  background-color: #B8B8B8;
+}
+
+.global-nav__item:nth-child(odd) {
+  background-color: #DCDCDC;
+}
+
+.global-nav__link {
+  color: #444;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bread-crumbs {
+  clear: left;
+  height: 30px;
+  background-color: #5C5C5C;
+}
+
+.bread-crumbs__items {
+  padding: 6px;
+}
+
+.bread-crumbs__item {
+  float: left;
+}
+
+.bread-crumbs__link {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bread-crumbs__item:nth-child(n+2)::before {
+  color: #FFF;
+  content: "\003e";
+  margin: 0 10px;
+}
+
+.top-ads {
+  clear: left;
+}
+
+.top-ads__item {
+  float: left;
+}
+
+.top-ads__image {
+  width: 300px;
+  margin: 15px 0 15px 15px;
+}
