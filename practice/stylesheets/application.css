@@ -86,6 +86,11 @@ body {
   margin: 15px 0 15px 15px;
 }
 
+.body {
+  clear: left;
+  overflow: hidden;
+}
+
 .main {
   float: right;
   width: 630px;
@@ -287,6 +292,8 @@ body {
 .aside {
   background-color: #666;
   float: left;
+  padding-bottom: 32768px;
+  margin-bottom: -32768px;
   width: 330px;
 }
 
@@ -343,9 +350,9 @@ body {
 
 .about-author {
   background-color: #CCC;
-  float: right;
-  padding: 15px;
-  margin: 15px;
+  display: inline-block;
+  padding: 15px 15px 30px;
+  margin: 23px 15px 15px 20px;
   width: 440px;
   border-radius: 4px;
 }
@@ -355,6 +362,7 @@ body {
 }
 
 .about-author__image {
+  float: left;
   margin-top: 15px;
   width: 90px;
   border-radius: 50%;
@@ -362,7 +370,7 @@ body {
 
 .about-author__descriptions {
   font-size: 14px;
-  float: right;
+  display: inline-block;
   width: 340px;
 }
 
@@ -378,14 +386,11 @@ body {
   margin: 15px 0 0 6em;
 }
 
-.about-author__descriptions::after {
-  clear: both;
-}
-
 .footer-copyright {
-  clear: both;
   color: #FFF;
+  display: block;
   font-size: 14px;
   text-align: center;
   text-shadow: 0 1px rgba(0, 0, 0, .8);
+  padding: 20px 0;
 }
