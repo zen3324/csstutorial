@@ -11,6 +11,7 @@ body {
   width: 960px;
   margin: 0 auto;
   background-color: #CFCFCF;
+  box-shadow: 0 0 5px 1.5px rgba(0, 0, 0, 0.25);
 }
 
 .header {
@@ -49,7 +50,9 @@ body {
 .bread-crumbs {
   clear: left;
   height: 30px;
-  background-color: #5C5C5C;
+  background: -webkit-gradient(linear, center top, center bottom, from(#6B6B6B), to(#5A5A5A));
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.2) inset;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .bread-crumbs__items {
@@ -97,14 +100,43 @@ body {
 }
 
 .main-header {
-  background-color: #FFF;
+  background-color: #EEE;
   height: 80px;
+  position: relative;
+  box-shadow: 0 1.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #CFCFCF;
+  border-width: 0 30px 30px 0;
+  border-style: solid;
+  border-color: transparent transparent #AAA #AAA;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .main-header__title {
   font-size: 35px;
   font-weight: bold;
   padding: 22px 60px;
+  position:relative;
+}
+
+.main-header__title:before {
+  background: #999;
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  width: 12px;
+  height: 12px;
+  box-shadow:
+    0 12px #444,
+    12px 0 #444,
+    12px 12px #999;
 }
 
 .article {
@@ -116,19 +148,67 @@ body {
 .article__title {
   font-size: 27px;
   font-weight: bold;
-  margin: 10px 25px 20px;
+  padding: 10px 25px 20px;
+  position: relative;
+}
+
+.article__title:before {
+  background: #999;
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  width: 12px;
+  height: 20px;
+  box-shadow:
+    0 20px #444;
 }
 
 .article__sub-title {
   font-size: 25px;
   font-weight: bold;
-  margin: 20px 20px;
+  margin: 20px 25px;
+  position: relative;
+}
+
+.article__sub-title:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -18px;
+  background: transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid #444;
+}
+
+.article__sub-title:after {
+  content: "";
+  background: #444;
+  position: absolute;
+  top: 6px;
+  left: -24px;
+  height: 16px;
+  width: 4px;
 }
 
 .article__sub-sub-title {
   font-size: 18px;
   font-weight: bold;
-  margin: 20px 20px;
+  margin: 20px 25px;
+  position: relative;
+}
+
+.article__sub-sub-title:before {
+  content: "";
+  background: #999;
+  position: absolute;
+  top: 7px;
+  left: -17px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  box-shadow: -8px 0 #444;
 }
 
 .article__paragraph {
@@ -142,6 +222,7 @@ body {
 .article__unorder-list-item {
   list-style: disc inside;
   line-height: 2em;
+  padding-left: 10px;
 }
 
 .article__order-list-item {
@@ -150,7 +231,30 @@ body {
 }
 
 .article__blockquote {
-  padding: 40px 0 30px 30px;
+  padding: 0 0 0 25px;
+  margin: 60px 0 30px 10px;
+  position: relative;
+  border-left: solid 6px #999;
+}
+
+.article__blockquote:before {
+  content: "";
+  background: #999;
+  position: absolute;
+  top: -48px;
+  left: -28px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.article__blockquote:after {
+  content: "\0022";
+  color: #EEE;
+  font-size: 60px;
+  position: absolute;
+  top: -20px;
+  left: -14px;
 }
 
 .article__image {
@@ -165,7 +269,30 @@ body {
 .form__title {
   font-size: 23px;
   font-weight: bold;
-  padding: 20px 20px;
+  padding: 20px 60px;
+  position: relative;
+}
+
+.form__title:after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  background: transparent;
+  border-top: 20px solid #444;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.form__title:before {
+  content: "";
+  background: #FFF;
+  border: solid 2px #444;
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  height: 23px;
+  width: 37px;
 }
 
 .form-item {
@@ -295,6 +422,7 @@ body {
   padding-bottom: 32768px;
   margin-bottom: -32768px;
   width: 330px;
+  box-shadow: -1px 0 1px 1.5px rgba(0, 0, 0, 0.1) inset;
 }
 
 .aside-ads__item {
@@ -355,7 +483,9 @@ body {
   margin: 23px 15px 15px 20px;
   width: 440px;
   border-radius: 4px;
+  box-shadow: 0 1px 1px 0.5px rgba(0, 0, 0, 0.5) inset;
 }
+
 .about-author__title {
   font-size: 14px;
   font-weight: bold;
