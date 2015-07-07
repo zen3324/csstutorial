@@ -18,6 +18,7 @@ body {
   background-color: #999;
   padding: 40px 0;
   text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .header__title {
@@ -45,6 +46,7 @@ body {
   font-size: 17px;
   font-weight: bold;
   text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .bread-crumbs {
